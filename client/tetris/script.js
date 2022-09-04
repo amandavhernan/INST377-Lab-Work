@@ -6,3 +6,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log(squares);
 });
+
+// tutorial 27:19
