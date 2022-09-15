@@ -138,7 +138,11 @@ form {
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
+<<<<<<< HEAD
   max-width: 450px;
+=======
+  max-width: fit-content;
+>>>>>>> e2f33a7 (update)
 }
 
 /*
