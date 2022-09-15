@@ -111,7 +111,6 @@ form {
   Rules can be combined on a block to apply the 'cascade' in order
   So you can use two classnames in a single class attribute
   like: <div class="box section">
-
   Rules may combine in unexpected ways - remember that the LAST thing written in this file will have "priority"
   And will be what displays in your client
 */
