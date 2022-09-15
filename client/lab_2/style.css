@@ -138,15 +138,6 @@ form {
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  max-width: 450px;
-=======
-  max-width: fit-content;
->>>>>>> e2f33a7 (update)
-=======
-  max-width: 450px;
->>>>>>> 4c27d83 (Fixing property in right section)
 }
 
 /*
