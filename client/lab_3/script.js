@@ -7,7 +7,7 @@
 */
 /* eslint-enable max-len */
 // set our first slide's position to "0", the opening position in an array
-const slidePosition = 0;
+let slidePosition = 0;
 
 // gather a reference to every slide we're using via the class name and querySelectorAll
 const slides = document.querySelectorAll('.carousel_item');
@@ -27,12 +27,21 @@ function updateSlidePosition() {
   slides[slidePosition].classList.add('visible');
 
 function moveToNextSlide() {
+
   /*
     add an if statement here that checks
     if you're already at the max number of slides
     and if so, sets your slidePosition to the first index of an array
     if not, set the slidePosition to the current position plus one
   */
+  if(slidePosition === totalSlides){
+    slidePosition = 0;
+  } else {
+    slidePosition += 1;
+  }
+
+
+
   updateSlidePosition(); // this is how you call a function within a function
 }
 function moveToPrevSlide() {
