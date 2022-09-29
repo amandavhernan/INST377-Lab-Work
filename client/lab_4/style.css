@@ -15,16 +15,16 @@ form input {
     border-radius: 4px;
   }
 
-  form label {
-    width: 100%;
-    width: -moz-available;          /* WebKit-based browsers will ignore this. */
-    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-    width: fill-available;
-    align-items: flex-start;
+form label {
+  width: 100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+  align-items: flex-start;
 
-    display: block; /* this turns the label text into a box we can set margins on */
-    margin-bottom: 0.5rem;
-  }
+  display: block; /* this turns the label text into a box we can set margins on */
+  margin-bottom: 0.5rem;
+}
 
 /* How To Write A Media Query For Small Screens */
 
