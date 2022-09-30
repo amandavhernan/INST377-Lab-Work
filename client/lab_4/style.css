@@ -8,8 +8,6 @@ html {
   min-width: 300px;
   overflow-x: hidden;
   overflow-y: scroll;
-
-  /* these are specific to different browsers */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -21,7 +19,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   font-weight: 400;
   line-height: 1.5;
@@ -38,13 +35,6 @@ h3 {
   padding:0;
   padding-bottom:1.5rem;
 }
-
-/*
-  - These styles use 'class names'
-  - You can apply them by using the 'class' attribute on your HTML
-  - like this: <div class="wrapper">
-  - note that the period vanishes there!
-*/
 
 .wrapper {
   min-height: 100vh;
@@ -69,28 +59,14 @@ h3 {
   padding-bottom: 1.5rem;
 }
 
-
-/*
-  This rule implies that the H1 tag lives within another HTML tag
-  It "inherits" some rules from the above
-  Those rules won't apply to an h1 that's outside a block with the class of 'header'
-*/
-
 .header h1 {
   display: block;
-  /* this will push other blocks out of the way */
-
-  /* colors */
   background-color: #E27D60;
   color: white;
-
-  /* shapes */
   border-radius: 6px;
   font-size: 1.5rem;
   padding: 1.25rem;
-  margin:0; /* removing the margin on h1 tags means the header pins to the top if we move */
-
-  /* box-shadows are fancy */
+  margin:0;
   box-shadow: #db6c4d 5px 5px, #e07355 10px 10px, #dd846b 15px 15px, #da9480 20px 20px, #e2a898 25px 25px;
 }
 
@@ -108,8 +84,23 @@ h3 {
   font-size: 16px;
 }
 
+.button:hover {
+  background-color:#a5687c;
+  transition: 0.10s;
+}
+
 .box {
   border: 3px solid;
+  border-color: #008081;
+  border-radius: 4px;
+  width: fit-content;
+  height:fit-content;
+  padding: 1.5rem;
+  margin: 0 auto;
+}
+
+.small_box {
+  border: 3px dotted;
   border-color: #008081;
   border-radius: 4px;
   width: fit-content;
@@ -131,13 +122,10 @@ h3 {
   margin: 1rem;
   align-items: center;
   max-width: 450px;
+  justify-content: center;
+  display: flex;
+  flex-flow: column;
 }
-
-/*
-  This block is actually dependent on the "container" block having a flex set on it
-  and the "wrapper" block displaying as a flex column with a "vertical height" (vh) of 100.
-  That serves to cram the footer to the bottom of the page.
-*/
 
 .footer {
   flex-shrink: 0;
@@ -153,16 +141,11 @@ h3 {
   text-decoration: underline;
 }
 
-/*
-  This is an example of a 'pseudoclass'
-  In this instance, it says what to do if a mouse hovers over a link
-  This is pretty desktop-specific, since there's no hover function on touchscreens
-*/
 .footer a:hover {
-  /* Hue, saturation, luminosity, alpha */
-  background-color: hsla(0, 0%, 90%, 0.15);
-  /* red, green, blue, alpha */
-  color: #41B3A3;
+  background-color: #41B3A3;
+  transition: 0.10s;
+  border-radius: 4px;
+  color: white;
   text-decoration: none;
 }
 
@@ -181,6 +164,8 @@ form input {
     margin-bottom: 1rem;
     height: 2rem;
     border-radius: 4px;
+
+    /* custom border color */
     border: 2px solid #C38D9E;
   }
 
@@ -201,6 +186,9 @@ form label {
     /* Rules in here will only apply when a screen is the correct size */
     /* check it out by using your developer tools to shrink your screen-size */
     .container {
-      background-color: rgba(204, 8, 162, 0.65);
+      background-color: #a5687c;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 }

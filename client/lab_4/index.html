@@ -1,14 +1,3 @@
-<!-- Bring in your successful HTML/CSS from the Flexbox lab -->
-<!-- Try typing 'doc' at the top of this file and pressing "tab" -->
-<!-- if your development environment is set up correctly -->
-<!-- the Emmett plugin will set this file up for you -->
-
-<!-- Requirements -->
-<!-- Your page will need a form in it with an 'action' to /api and a single text field with an id/name of "resto" -->
-<!-- If you open /routes/apiRoutes and go to line 38 you will find the server side answer to your request! -->
-
-<!-- This week doesn't have a script.js file in it, because you're focusing on HTML and CSS -->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +15,8 @@
 
             <div class="left_section box">
                 <h3>Form Inputs</h3>
-                <form action="/api">
+                <form action="/api" class="small_box">
+                    <p>Restaurant Name</p>
                     <label for="resto"></label>
                     <input type="text" name="resto" id="resto">
                     <button class="button" type="submit">Submit</button>
@@ -35,7 +25,7 @@
 
             <div class="right_section box">
                 <h3>Local Restaurants</h3>
-                <div class="restaurant_list">A list of local restaurants</div>
+                <div class="restaurant_list small_box">A list of local restaurants from an API</div>
             </div>  
 
         </div>
