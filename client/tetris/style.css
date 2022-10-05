@@ -12,12 +12,7 @@
 
 .grid div {
     width: 20px;
-    height: 20;
-    background-color: red;
-}
-
-.tetromino {
-    background-color: blue;
+    height: 20px;
 }
 
 .mini-grid {
@@ -29,7 +24,11 @@
     background-color: yellow;
   }
   
-  .mini-grid div {
+.mini-grid div {
     height: 20px;
     width: 20px;
   }
+
+.tetromino {
+    background-color: blue;
+}
