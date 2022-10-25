@@ -74,6 +74,14 @@ async function mainEvent() {
     loadAnimation.classList.remove('lds-ellipsis');
     loadAnimation.classList.add('lds-ellipsis_hidden');
 
+    let currentList = [];
+
+    form.addEventListener('input', (event)=> {
+      console.log(event.target.value);
+      currentList = filterList(currentList, event.target.value);
+      injectHTML(currentList);
+    });
+
     // And here's an eventListener! It's listening for a "submit" button specifically being clicked
     // this is a synchronous event event, because we already did our async request above, and waited for it to resolve
     form.addEventListener('submit', (submitEvent) => {
@@ -81,11 +89,10 @@ async function mainEvent() {
       submitEvent.preventDefault();
 
       // This constant will have the value of your 15-restaurant collection when it processes
-      const restaurantList = processRestaurants(arrayFromJson.data);
-      console.log(restaurantList);
+      currentList = processRestaurants(arrayFromJson.data);
 
       // And this function call will perform the "side effect" of injecting the HTML list for you
-      injectHTML(restaurantList);
+      injectHTML(currentList);
 
       // By separating the functions, we open the possibility of regenerating the list
       // without having to retrieve fresh data every time
