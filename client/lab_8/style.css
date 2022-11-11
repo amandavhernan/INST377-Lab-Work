@@ -1,3 +1,11 @@
+#map {
+    height: 380px;
+    display: block;
+    width: 400px;
+    border: 3px dotted #008081;
+    margin-bottom: 1rem;
+}
+
 .lds-ellipsis {
     display: inline-block;
     position: relative;
